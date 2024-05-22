@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Aula08_Mobile</string>
+    <string name="app_name">Venda de Ingressos</string>
+    <string name="rbIngresso">Ingresso</string>
+    <string name="rbIngressoVip">IngressoVip</string>
+
+    <string name="etCodigoIdentificador">Insira o Código Identificador</string>
+    <string name="etValorIngresso">Insira o Valor do Ingresso</string>
+    <string name="avisoVip">Apenas para IngressosVip</string>
+    <string name="etFuncaoDesempenhada">Insira a Função Exercida</string>
+    <string name="btnCalcular">Calcular Valor</string>
+
+    <string name="btnVoltar">Voltar</string>
+
 </resources>

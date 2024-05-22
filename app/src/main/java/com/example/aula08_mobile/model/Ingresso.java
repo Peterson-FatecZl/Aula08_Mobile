@@ -1,11 +1,14 @@
 package com.example.aula08_mobile.model;
 
+import androidx.annotation.NonNull;
+
 public class Ingresso {
 
     private String codigoIdentificador;
     private float valor;
     private float taxa;
-    public Ingresso(){
+
+    public Ingresso() {
         super();
     }
 
@@ -33,9 +36,14 @@ public class Ingresso {
         this.taxa = taxa;
     }
 
-    public float valorFinal(){
-        float taxa = this.valor * this.taxa;
-        float valorFinal = this.valor + taxa;
+    public float valorFinal() {
+        float valorFinal = valor + (taxa * valor);
         return valorFinal;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.codigoIdentificador + "\n" + this.valor;
     }
 }

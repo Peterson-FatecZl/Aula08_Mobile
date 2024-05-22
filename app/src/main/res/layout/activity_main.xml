@@ -8,12 +8,112 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/akaya_telivigala"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <RadioButton
+            android:id="@+id/rbIngresso"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/rbIngresso"
+            tools:text="@string/rbIngresso" />
+
+        <RadioButton
+            android:id="@+id/rbIngressoVip"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/rbIngressoVip"
+            android:textSize="14sp"
+            tools:text="@string/rbIngressoVip" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etCodigoIdentificador"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/etCodigoIdentificador"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/etValorIngresso"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/etValorIngresso"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoIdentificador" />
+
+    <EditText
+        android:id="@+id/etFuncaoDesempenhada"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/etFuncaoDesempenhada"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvisoVip" />
+
+    <TextView
+        android:id="@+id/tvAvisoVip"
+        android:layout_width="243dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/akaya_telivigala"
+        android:text="@string/avisoVip"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorIngresso" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:text="@string/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFuncaoDesempenhada" />
 </androidx.constraintlayout.widget.ConstraintLayout>

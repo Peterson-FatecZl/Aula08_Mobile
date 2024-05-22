@@ -1,11 +1,13 @@
 package com.example.aula08_mobile.model;
 
 
-public class IngressoVip extends Ingresso{
+import androidx.annotation.NonNull;
+
+public class IngressoVip extends Ingresso {
 
     private String FuncaoExercidaPelaPessoa;
 
-    public IngressoVip(){
+    public IngressoVip() {
         super();
         this.setTaxa(0.18f);
     }
@@ -19,8 +21,14 @@ public class IngressoVip extends Ingresso{
     }
 
     @Override
-    public float valorFinal(){
-        float valorFinal = getTaxa() * getValor();
+    public float valorFinal() {
+        float valorFinal = (getTaxa() * getValor()) + getValor();
         return valorFinal;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return getCodigoIdentificador() + "\n" + getValor() + "\n" + getFuncaoExercidaPelaPessoa();
     }
 }
